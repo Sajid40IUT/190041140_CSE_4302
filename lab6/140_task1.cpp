@@ -45,6 +45,8 @@ public:
         Counter temp;
         temp.count = count + cx.count;
         
+        temp.incremt = min (incremt, cx.incremt );
+        
         return temp;
     }
 
@@ -52,7 +54,8 @@ public:
     {
         Counter temp;
         temp.count = count + val;
-        
+
+
         return temp;
     }
 
@@ -63,11 +66,11 @@ public:
 
     Counter operator ++ ()
     {
-    return Counter(++count); 
+    return Counter(count+=incremt); 
     }
     Counter operator ++ (int) 
     { 
-    return Counter(count++);
+    return Counter(count+=incremt);
     }
 
     void operator += (Counter cx)
