@@ -1,5 +1,0 @@
-ROOT->
-CV: Computer vision
-NLP: Hate speech
-Audio Synthesizer: 
-Data Augmentation: paraprasing...
